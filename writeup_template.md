@@ -27,7 +27,7 @@ signs data set:
 * The shape of a traffic sign image is [32, 32, 3]
 * The number of unique classes/labels in the data set is 43
 
-####2. Include an exploratory visualization of the dataset.
+2. Include an exploratory visualization of the dataset.
 
 Here is an exploratory visualization of the data set.
 
@@ -110,8 +110,8 @@ If a well known architecture was chosen:
 
 Here are five German traffic signs that I found on the web:
 
-![alt text][image4] ![alt text][image5] ![alt text][image6] 
-![alt text][image7] ![alt text][image8]
+![alt text](https://github.com/AhmedMYassin/Traffic-Sign-Classifier/blob/master/examples/DE_image0.png) ![alt text](https://github.com/AhmedMYassin/Traffic-Sign-Classifier/blob/master/examples/DE_image1.png) ![alt text](https://github.com/AhmedMYassin/Traffic-Sign-Classifier/blob/master/examples/DE_image2.png) 
+![alt text](https://github.com/AhmedMYassin/Traffic-Sign-Classifier/blob/master/examples/DE_image3.png) ![alt text](https://github.com/AhmedMYassin/Traffic-Sign-Classifier/blob/master/examples/DE_image4.png)
 
 The first image might be difficult to classify because ...
 

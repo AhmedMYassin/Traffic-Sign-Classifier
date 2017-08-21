@@ -68,24 +68,24 @@ To train the model, I used the LeNet model for 10 epochs using 0.0055 learning r
 
 | EPOCH         		|     Validation Accuracy	        					|      Training Accuracy	        					| 
 |:---------------------:|:---------------------------------------------:|:---------------------------------------------:| 
-| 1	      	| 0.932 				| 0.959 				|
-| 2	      	| 0.945 				| 0.978 				|
-| 3	      	| 0.955 				| 0.981 				|
-| 4	      	| 0.950 				| 0.980 				|
-| 5	      	| 0.950 				| 0.982 				|
-| 6	      	| 0.951 				| 0.986 				|
-| 7	      	| 0.950 				| 0.977 				|
-| 8	      	| 0.957 				| 0.988 				|
-| 9	      	| 0.948 				| 0.982 				|
-| 10	      	| 0.959 				| 0.987 				|
+| 1	      	| 0.948 				| 0.971 				|
+| 2	      	| 0.950 				| 0.982 				|
+| 3	      	| 0.955 				| 0.984 				|
+| 4	      	| 0.946 				| 0.985 				|
+| 5	      	| 0.963 				| 0.983 				|
+| 6	      	| 0.950 				| 0.987 				|
+| 7	      	| 0.959 				| 0.987 				|
+| 8	      	| 0.960 				| 0.990 				|
+| 9	      	| 0.958 				| 0.990 				|
+| 10	      	| 0.958 				| 0.990 				|
 
 ### 4. Model Tuning
 At the begining the accuracy wasn't good (below 0.85) so I tried to use the inception model to train the model but it was so complicated and always tends to overfitting because of the large number of feature maps and the final number of input neurons to the fully connected NN. I got back the LeNet model and changed the batch size to be smaller (150) and increased the number of epochs to be 10. Tuning the number of feature maps was the key to increase the accuracy.
 
 My final model results were:
-* training set accuracy of 0.987
-* validation set accuracy of 0.959 
-* test set accuracy of 0.941
+* training set accuracy of 0.990
+* validation set accuracy of 0.958 
+* test set accuracy of 0.942
  
 
 #### Test a Model on New Images
@@ -95,27 +95,69 @@ I have downloaded the German traffic sign dataset and I select 5 signs randomly 
 ![alt text](https://github.com/AhmedMYassin/Traffic-Sign-Classifier/blob/master/examples/DE_image0.png) ![alt text](https://github.com/AhmedMYassin/Traffic-Sign-Classifier/blob/master/examples/DE_image1.png) ![alt text](https://github.com/AhmedMYassin/Traffic-Sign-Classifier/blob/master/examples/DE_image2.png) 
 ![alt text](https://github.com/AhmedMYassin/Traffic-Sign-Classifier/blob/master/examples/DE_image3.png) ![alt text](https://github.com/AhmedMYassin/Traffic-Sign-Classifier/blob/master/examples/DE_image4.png)
 
-After testing the selected images the accuaracy was 1.0 which is a perfect prediction. The accuracy isn't always 1.0, sometimes it's 0.8 which means that one of the images was missed
+After testing the selected images the accuaracy was 0.0 which is a perfect prediction. The accuracy isn't always 1.0, sometimes it's 0.8 which means that one of the images was missed
 
 Here are the results of the prediction:
 
 | Image			        |     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| Double curve      		| Double curve   									| 
-| Turn right ahead     			| Turn right ahead 										|
-| Double curve					| Double curve											|
-| Bicycles crossing	      		| Bicycles crossing					 				|
-| Pedestrians			| Pedestrians      							|
+| Speed limit (100km/h)      		| Speed limit (100km/h)   									| 
+| Turn left ahead     			| Turn left ahead 										|
+| Speed limit (60km/h)					| Speed limit (60km/h)											|
+| Double curve	      		| Stop					 				|
+| Speed limit (70km/h)			| Vehicles over 3.5 metric tons prohibited      							|
 
 Using softmax probability gives better insight about the model prediction accuaracy, Here are the probability of the top 5 probabilities.
 
+First Image top 5 probabilities:
+
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| .60         			| Stop sign   									| 
-| .20     				| U-turn 										|
-| .05					| Yield											|
-| .04	      			| Bumpy Road					 				|
-| .01				    | Slippery Road      							|
+| 1.00         			| Speed limit (100km/h)   									| 
+| .00     				| Speed limit (80km/h) 										|
+| .00					| Speed limit (120km/h)											|
+| .00	      			| Speed limit (30km/h)					 				|
+| .00				    | Roundabout mandatory      							|
+
+Second Image top 5 probabilities:
+
+| Probability         	|     Prediction	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| 1.00         			| Turn left ahead  									| 
+| .00     				| Keep right 										|
+| .00					| General caution											|
+| .00	      			| Traffic signals					 				|
+| .00				    | Speed limit (50km/h)      							|
+
+Third Image top 5 probabilities:
+
+| Probability         	|     Prediction	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| 1.00         			| Speed limit (60km/h)  									| 
+| .00     				| Speed limit (80km/h) 										|
+| .00					| Speed limit (50km/h)											|
+| .00	      			| Speed limit (30km/h)					 				|
+| .00				    | Turn left ahead      							|
+
+Fourth Image top 5 probabilities:
+
+| Probability         	|     Prediction	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| 1.00         			| Stop  									| 
+| .00     				| Ahead only 										|
+| .00					| Speed limit (120km/h)											|
+| .00	      			| Speed limit (80km/h)					 				|
+| .00				    | Roundabout mandatory      							|
+
+Fifth Image top 5 probabilities:
+
+| Probability         	|     Prediction	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| 1.00         			| Vehicles over 3.5 metric tons prohibited  									| 
+| .00     				| No passing 										|
+| .00					| No vehicles											|
+| .00	      			| Speed limit (100km/h)					 				|
+| .00				    | Speed limit (30km/h)      							|
 
 
 ### Visualizing the Neural Network

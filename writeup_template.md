@@ -38,9 +38,9 @@ Here is an exploratory visualization of the data set. It is a bar chart showing 
 #### Preprocessing: 
 In this phase we convert the input images to grayscale and apply CLAHE "Contrast Limited Adaptive Histogram Equalization". The input images are also normalized ((value/255) - 0.5).
 Before Preprocessing
-![alt text](https://github.com/AhmedMYassin/Traffic-Sign-Classifier/blob/master/visualization.png)
+![alt text](https://github.com/AhmedMYassin/Traffic-Sign-Classifier/blob/master/examples/dataset_ex_before.png)
 After Preprocessing
-![alt text](https://github.com/AhmedMYassin/Traffic-Sign-Classifier/blob/master/visualization.png)
+![alt text](https://github.com/AhmedMYassin/Traffic-Sign-Classifier/blob/master/examples/dataset_ex_After.png)
 #### Augmentation
 In this phase, the input images are rotated by 20 and -20 degrees and added to the training set.
 
@@ -145,9 +145,9 @@ For the second image ...
 ### Visualizing the Neural Network
 #### Visualizing the feature maps in the neural network is very helpful. This image is the effect of each of the 22 feature maps on the input image
 #### Input Image
-![alt text](https://github.com/AhmedMYassin/Traffic-Sign-Classifier/blob/master/visualization.png)
+![alt text](https://github.com/AhmedMYassin/Traffic-Sign-Classifier/blob/master/examples/visualization_image.png)
 #### Feature Map Effect
-![alt text](https://github.com/AhmedMYassin/Traffic-Sign-Classifier/blob/master/visualization.png)
+![alt text](https://github.com/AhmedMYassin/Traffic-Sign-Classifier/blob/master/examples/visualization.png)
 
 
 

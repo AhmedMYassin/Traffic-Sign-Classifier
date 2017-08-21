@@ -14,7 +14,7 @@ The traffic sign project is about building a model based on the convolutional ne
 
 You're reading it! and here is a link to my [project code](https://github.com/AhmedMYassin/Traffic-Sign-Classifier/blob/master/Traffic_Sign_Classifier.ipynb)
 
-## 1. Data Set Summary & Exploration
+### 1. Data Set Summary & Exploration
 
 1. Provide a basic summary of the data set. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually.
 
@@ -33,7 +33,7 @@ Here is an exploratory visualization of the data set.
 
 ![alt text](https://github.com/AhmedMYassin/Traffic-Sign-Classifier/blob/master/examples/plot_hist.png)
 
-## 2. Design and Test a Model Architecture
+### 2. Design and Test a Model Architecture
 
 #### Preprocessing: 
 In this phase we convert the input images to grayscale and apply CLAHE "Contrast Limited Adaptive Histogram Equalization". The input images are also normalized ((value/255) - 0.5).
@@ -49,7 +49,7 @@ In this phase, the input images are rotated by 20 and -20 degrees and added to t
 |:---------------------:|:---------------------------------------------:| 
 | ![alt text](https://github.com/AhmedMYassin/Traffic-Sign-Classifier/blob/master/examples/dataset_ro_after_cw.png)         		| ![alt text](https://github.com/AhmedMYassin/Traffic-Sign-Classifier/blob/master/examples/dataset_ro_after_ccw.png)   							| 
 
-## Model Archeticture:
+#### Model Archeticture:
 
 | Layer         		|     Description	        					| 
 |:---------------------:|:---------------------------------------------:| 

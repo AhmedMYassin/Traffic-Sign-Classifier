@@ -99,9 +99,9 @@ I have downloaded the German traffic sign dataset and I select 5 signs randomly 
 ![alt text](https://github.com/AhmedMYassin/Traffic-Sign-Classifier/blob/master/examples/DE_image0.png) ![alt text](https://github.com/AhmedMYassin/Traffic-Sign-Classifier/blob/master/examples/DE_image1.png) ![alt text](https://github.com/AhmedMYassin/Traffic-Sign-Classifier/blob/master/examples/DE_image2.png) 
 ![alt text](https://github.com/AhmedMYassin/Traffic-Sign-Classifier/blob/master/examples/DE_image3.png) ![alt text](https://github.com/AhmedMYassin/Traffic-Sign-Classifier/blob/master/examples/DE_image4.png)
 
-2nd and 3rd images have very low quality in addition to being grayscale images so it was expected that the model fails in predicting the right class which doesn't happen
+2nd and 3rd images have very low quality so it was expected that the model fails in predicting the right class as it's hard to extract the featues of the right class.
 
-1st and 4th images have good quality so it's expected to be easy for the model to predict the right class
+1st and 4th images have good quality so it's expected to be easy for the model to predict the right class as extracting the features will be easier.
 
 After testing the selected images the accuaracy was 1.0 which is a perfect prediction. The accuracy isn't always 1.0, sometimes it's 0.8 which means that one of the images was missed
 

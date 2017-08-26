@@ -31,7 +31,11 @@ Here is an exploratory visualization of the data set.
 ### 2. Design and Test a Model Architecture
 
 #### Preprocessing: 
-In this phase we convert the input images to grayscale and apply CLAHE "Contrast Limited Adaptive Histogram Equalization". The input images are also normalized ((value/255) - 0.5).
+In this phase, The image has 3 phases for preprocessing 
+1. Convert to Grayscale: However the RGB images have more data, we know that the data from the color would need the model to be more compilcated in the same time this type of information could be neglected and it won't affect our model so much
+2. Apply CLAHE "Contrast Limited Adaptive Histogram Equalization": As we have grayscale image, we have only values from 0 to 255. Most of the values will be in the gray range not the white or the black so we need to apply CLAHE to have better insight from the image. In the next images, you will find the difference between the image before and after preprocessing 
+3. Normalization: The input values are from 0 to 255 so we need to normalize these values to be from -1 to 1 as we will use relu activation function which works better with this range of input values. For normalization we use this formula ((value/255) - 0.5).
+
 
 | Before			        |     After	        					| 
 |:---------------------:|:---------------------------------------------:| 

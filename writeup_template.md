@@ -32,7 +32,7 @@ Here is an exploratory visualization of the data set.
 
 #### Preprocessing: 
 In this phase, The image has 3 phases for preprocessing 
-1. Convert to Grayscale: However the RGB images have more data, we know that the data from the color would need the model to be more compilcated in the same time this type of information could be neglected and it won't affect our model so much
+1. Convert to Grayscale: However the RGB images have more data, we know that the data from the color would need the model to be more complicated in the same time this type of information could be neglected and it won't affect our model so much
 2. Apply CLAHE "Contrast Limited Adaptive Histogram Equalization": As we have grayscale image, we have only values from 0 to 255. Most of the values will be in the gray range not the white or the black so we need to apply CLAHE to have better insight from the image. In the next images, you will find the difference between the image before and after preprocessing 
 3. Normalization: The input values are from 0 to 255 so we need to normalize these values to be from -1 to 1 as we will use relu activation function which works better with this range of input values. For normalization we use this formula ((value/255) - 0.5).
 
@@ -84,7 +84,7 @@ To train the model, I used the LeNet model for 10 epochs using 0.0055 learning r
 | 10	      	| 0.958 				| 0.990 				|
 
 ### 4. Model Tuning
-At the begining the accuracy wasn't good (below 0.85) so I tried to use the inception model to train the model but it was so complicated and always tends to overfitting because of the large number of feature maps and the final number of input neurons to the fully connected NN. I got back the LeNet model and changed the batch size to be smaller (150) and increased the number of epochs to be 10. Tuning the number of feature maps was the key to increase the accuracy.
+At the beginning the accuracy wasn't good (below 0.85) so I tried to use the inception model to train the model but it was so complicated and always tends to overfitting because of the large number of feature maps and the final number of input neurons to the fully connected NN. I got back the LeNet model and changed the batch size to be smaller (150) and increased the number of epochs to be 10. Tuning the number of feature maps was the key to increase the accuracy.
 
 My final model results were:
 * training set accuracy of 0.990
@@ -103,7 +103,7 @@ I have downloaded the German traffic sign dataset and I select 5 signs randomly 
 
 1st and 4th images have good quality so it's expected to be easy for the model to predict the right class as extracting the features will be easier.
 
-After testing the selected images the accuaracy was 1.0 which is a perfect prediction. The accuracy isn't always 1.0, sometimes it's 0.8 which means that one of the images was missed
+After testing the selected images the accuracy was 1.0 which is a perfect prediction. The accuracy isn't always 1.0, sometimes it's 0.8 which means that one of the images was missed
 
 Here are the results of the prediction:
 
@@ -174,6 +174,5 @@ Fifth Image top 5 probabilities:
 ![alt text](https://github.com/AhmedMYassin/Traffic-Sign-Classifier/blob/master/examples/visualization_image.png)
 #### Feature Map Effect
 ![alt text](https://github.com/AhmedMYassin/Traffic-Sign-Classifier/blob/master/examples/visualization.png)
-
 
 
